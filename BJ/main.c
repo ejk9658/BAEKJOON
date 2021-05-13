@@ -1,14 +1,17 @@
-//
-//  main.c
-//  BJ
-//
-//  Created by 강은진 on 2021/05/13.
-//
-
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+int main(void) {
+    int N, max, min;
+    scanf("%d",&N);
+    
+    int n[N];
+    for(int i=0;i<N;i++) {
+        scanf("%d",&n[i]);
+    }
+    max=min=n[0];
+    for(int i=1;i<N;i++) {
+        if(max<n[i]) max=n[i];
+        if(min>n[i]) min=n[i];
+    }
+    printf("%d %d\n",min,max);
 }
